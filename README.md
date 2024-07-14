@@ -45,8 +45,8 @@ Extend any string with the `StatusPrint` extension methods to print beautiful an
 
 **Output:**
 
-```shell
-[32m[1m✅ Operation completed successfully[0m
+```
+✅ Operation completed successfully
 ```
 
 #### Error Message
@@ -57,9 +57,9 @@ Extend any string with the `StatusPrint` extension methods to print beautiful an
 
 **Output:**
 
-```shell
-[38;5;88m[1m❌ Null pointer exception
-# Stack trace (first 4 lines)...[0m
+```
+❌ Null pointer exception
+# Stack trace (first 4 lines)...
 ```
 
 #### Warning Message
@@ -70,8 +70,8 @@ Extend any string with the `StatusPrint` extension methods to print beautiful an
 
 **Output:**
 
-```shell
-[38;5;214m[1m⚠️ Low disk space[0m
+```
+⚠️ Low disk space
 ```
 
 #### Info Message
@@ -82,8 +82,8 @@ Extend any string with the `StatusPrint` extension methods to print beautiful an
 
 **Output:**
 
-```shell
-[34m[1mℹ️ Just some info[0m
+```
+ℹ️ Just some info
 ```
 
 #### Custom Status
@@ -94,8 +94,8 @@ Extend any string with the `StatusPrint` extension methods to print beautiful an
 
 **Output:**
 
-```shell
-[35m[1m💡 Custom message with custom1 status[0m
+```
+💡 Custom message with custom1 status
 ```
 
 #### Boxed Message
@@ -106,9 +106,9 @@ Extend any string with the `StatusPrint` extension methods to print beautiful an
 
 **Output:**
 
-```shell
+```
 ╔════════════════════════════════════════════╗
-║  [32m[1m✅ This is a boxed success message[0m         ║
+║  ✅ This is a boxed success message         ║
 ╚════════════════════════════════════════════╝
 ```
 
