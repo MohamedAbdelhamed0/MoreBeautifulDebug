@@ -1,6 +1,6 @@
 import 'package:flutter/foundation.dart';
 
-// Define color codes
+// Define color codes for terminal output
 const String green = '\u001b[32m';
 const String darkRed = '\u001b[38;5;88m';
 const String orange = '\u001b[38;5;214m';
@@ -9,10 +9,10 @@ const String purple = '\u001b[35m';
 const String cyan = '\u001b[36m';
 const String reset = '\u001b[0m';
 
-// Define bold code
+// Define bold code for terminal output
 const String bold = '\u001b[1m';
 
-// Enum for statuses
+// Enum for different statuses
 enum Status {
   success,
   error,
@@ -22,14 +22,14 @@ enum Status {
   custom2,
 }
 
-// Extension on String to print with different statuses
+// Extension on String to print messages with different statuses and styles
 extension StatusPrint on String {
-  /// Method to print success status
+  /// Print message with success status
   void success({bool inBox = false}) {
     _printWithEmojiAndColor('✅', green, inBox: inBox);
   }
 
-  /// Method to print error status with file path and line number
+  /// Print message with error status, including file path and line number
   void error({String? errorMessage, bool inBox = false}) {
     if (errorMessage == null || errorMessage.isEmpty) {
       throw ArgumentError('Error message is required for Status.error');
@@ -42,7 +42,7 @@ extension StatusPrint on String {
     }
   }
 
-  /// Method to print warning status with optional message
+  /// Print message with warning status, including an optional warning message
   void warning({String? warningMessage, bool inBox = false}) {
     if (warningMessage == null || warningMessage.isEmpty) {
       throw ArgumentError('Warning message is required for Status.warning');
@@ -51,12 +51,12 @@ extension StatusPrint on String {
         errorMessage: warningMessage, inBox: inBox);
   }
 
-  /// Method to print info status
+  /// Print message with info status
   void info({bool inBox = false}) {
     _printWithEmojiAndColor('ℹ️', blue, inBox: inBox);
   }
 
-  /// Method to print a custom status with predefined color and emoji
+  /// Print message with a custom status
   ///
   /// [status] - The status to print.
   /// [message] - The message to print (required for error and warning statuses).
