@@ -1,8 +1,7 @@
 import 'dart:io';
-
 import 'package:flutter/foundation.dart';
 
-void listFiles(Directory dir, {String prefix = ''}) async {
+void listFiles(Directory dir, {String prefix = ''}) {
   try {
     final List<FileSystemEntity> entities = dir.listSync().toList();
     for (int i = 0; i < entities.length; i++) {
@@ -37,8 +36,7 @@ void listFiles(Directory dir, {String prefix = ''}) async {
   }
 }
 
-void main() {
-  // Use the project's lib directory as the root directory
+void listLibFiles() {
   Directory current = Directory.current;
   Directory libDir = Directory('${current.path}/lib');
   if (libDir.existsSync()) {
@@ -53,4 +51,3 @@ void main() {
     }
   }
 }
-//dart run app_structure.dart
